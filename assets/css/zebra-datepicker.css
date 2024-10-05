@@ -1,0 +1,100 @@
+.Zebra_DatePicker {
+	display: table;
+}
+
+.booking-form .checkin,
+.booking-form .checkout {
+	position: relative;
+}
+
+.booking-form .Zebra_DatePicker {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	visibility: visible;
+	opacity: 1;
+	background-color: #fff;
+	margin-top: 64px;
+	box-shadow: 0 5px 10px 0 var(--box-shadow-color);
+	transition: opacity var(--transition-duration), visibility var(--transition-duration);
+}
+
+@media (min-width: 992px) {
+	.booking-form .Zebra_DatePicker {
+		margin-top: 70px;
+	}
+}
+
+.booking-form .Zebra_DatePicker.dp_hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.Zebra_DatePicker table {
+	margin-bottom: 0;
+}
+
+.Zebra_DatePicker table ~ table,
+.Zebra_DatePicker table ~ table th,
+.Zebra_DatePicker table ~ table tr:first-child td {
+	border-top: 0;
+}
+
+.Zebra_DatePicker td,
+.Zebra_DatePicker th {
+	font-size: .875em;
+	cursor: pointer;
+	text-align: center;
+	min-width: 30px;
+	width: 30px;
+}
+
+.Zebra_DatePicker .dp_body .dp_not_in_month {
+	color: var(--faded-color);
+}
+
+.Zebra_DatePicker .dp_body .dp_current,
+.Zebra_DatePicker .dp_body .dp_hover {
+	background-color: var(--footer-background-color);
+}
+
+.Zebra_DatePicker .dp_body .dp_disabled {
+	color: var(--faded-color);
+	cursor: text;
+}
+
+.Zebra_DatePicker .dp_daypicker .not-available {
+	background: var(--footer-background-color) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2VlMDAwMCIgZD0iTTE5LDYuNDFMMTcuNTksNUwxMiwxMC41OUw2LjQxLDVMNSw2LjQxTDEwLjU5LDEyTDUsMTcuNTlMNi40MSwxOUwxMiwxMy40MUwxNy41OSwxOUwxOSwxNy41OUwxMy40MSwxMkwxOSw2LjQxWiIgLz48L3N2Zz4=) no-repeat center center;
+	text-indent: -999px;
+}
+
+.Zebra_DatePicker .dp_body .dp_selected {
+	background-color: var(--complementary-color);
+	color: var(--complementary-color-alt);
+	font-weight: 600;
+}
+
+.Zebra_DatePicker .dp_monthpicker td,
+.Zebra_DatePicker .dp_yearpicker td {
+	width: 33.3333%;
+}
+
+.Zebra_DatePicker table.dp_header th,
+.Zebra_DatePicker table.dp_header tbody th {
+	cursor: text;
+	border-top-width: 0;
+}
+
+.Zebra_DatePicker .dp_actions .dp_caption {
+	font-size: 1rem;
+	font-weight: 600;
+	width: 100%;
+	padding-top: 5px;
+}
+
+.Zebra_DatePicker .dp_actions .dp_next .mdi,
+.Zebra_DatePicker .dp_actions .dp_previous .mdi {
+	display: inline-block;
+	font-size: 24px;
+	line-height: 30px;
+}

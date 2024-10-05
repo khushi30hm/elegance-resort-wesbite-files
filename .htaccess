@@ -1,0 +1,25 @@
+RewriteEngine On
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove index.html from URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s(.*)/index\.html [NC]
+RewriteRule ^ %1/ [R=301,L]
+
+# Add .html extension to URL (if file exists)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ $1.html [L]
+
+# to redirect my.site.com to my.site.com/index.html
+Redirect 301 /our-rooms.php /family-room.html
+Redirect 301 /destination-wedding /destination-weddings.html
+Redirect 301 /destination-wedding /www.eleganceresort.in/destination-weddings.html
+Redirect 301 /awards.php /packages.html
+Redirect 301 /vrindavan-hotel-booking.php?s=Deluxe-Room /hotels.eglobe-solutions.com/eleganceresortgha/booking/hotels/elegance-resort-vrindavan-vrindavan-BpT7L?roomId=79745&checkIn=2024-09-28&nights=1&adults=2&child=0&ghaRef=dQx30b0AkCgKdi0RSgaB
+
+
+
+RewriteRule .* https://www.eleganceresort.in/%{REQUEST_URI} [R=301,L]
